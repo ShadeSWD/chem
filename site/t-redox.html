@@ -1,0 +1,572 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Глава 6. Окислительно-восстановительные реакции</title>
+<meta name="description" content="Окисление и восстановление, окислитель и восстановитель, важнейшие окислители и восстановители, типы ОВР (межмолекулярные, внутримолекулярные, диспропорционирование, сопропорционирование), метод электронного баланса по шагам, влияние среды на восстановление перманганата, стандартные окислительно-восстановительные потенциалы и ряд напряжений металлов.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚗️</text></svg>">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<script src="assets/site.js" data-root="./" data-page="theory"></script>
+<main class="wrap">
+  <h1>Глава 6. Окислительно-восстановительные реакции</h1>
+
+  <p class="lead">Все химические реакции делятся на два класса. В одних степени
+  окисления атомов не меняются — это обмен, нейтрализация, осаждение
+  (HCl + KOH = KCl + H<sub>2</sub>O). В других электроны переходят от одних
+  атомов к другим, и степени окисления меняются: Zn<sup>0</sup> + 2H<sup>+</sup>Cl<sup>−</sup>
+  = Zn<sup>+2</sup>Cl<sub>2</sub><sup>−</sup> + H<sub>2</sub><sup>0</sup>. Именно
+  такие реакции называются окислительно-восстановительными. Ими идут дыхание и
+  фотосинтез, горение топлива, выплавка и коррозия металлов, работа аккумулятора
+  и электролиз. Эта глава даёт рабочий аппарат: как расставить коэффициенты, как
+  предсказать продукт по среде и как заранее сказать, пойдёт ли процесс вообще.</p>
+
+  <div class="tldr">
+    <h2>Коротко</h2>
+    <ul>
+      <li><b>Окисление</b> — отдача электронов, степень окисления растёт;
+      <b>восстановление</b> — присоединение электронов, степень окисления падает.
+      Одно без другого не бывает.</li>
+      <li>Отдающая частица — <b>восстановитель</b>, она при этом окисляется;
+      принимающая — <b>окислитель</b>, он восстанавливается. Число отданных
+      электронов строго равно числу принятых — на этом стоит весь расчёт.</li>
+      <li>Свойства вещества задаются степенью окисления элемента: высшая — только
+      окислитель (KMnO<sub>4</sub>, K<sub>2</sub>Cr<sub>2</sub>O<sub>7</sub>),
+      низшая — только восстановитель (H<sub>2</sub>S, HCl),
+      промежуточная — и то и другое (H<sub>2</sub>O<sub>2</sub>).</li>
+      <li>Типы ОВР: межмолекулярные, внутримолекулярные, диспропорционирование
+      (самоокисление-самовосстановление) и сопропорционирование.</li>
+      <li>Коэффициенты подбирает <b>метод электронного баланса</b>: степени
+      окисления → электронные уравнения → НОК → множители → проверка по атомам
+      элемента, не менявшего степень окисления.</li>
+      <li>Продукт зависит от среды: перманганат в кислой среде даёт
+      Mn<sup>2+</sup>, в нейтральной — MnO<sub>2</sub>, в сильнощелочной —
+      MnO<sub>4</sub><sup>2−</sup>.</li>
+      <li>Пойдёт ли реакция, показывает стандартный потенциал \(\varphi^{0}\):
+      потенциал окислителя должен быть больше потенциала восстановителя.</li>
+    </ul>
+    <div class="keyf">
+      <b>Ключевые формулы.</b>
+      Баланс электронов: \(n_{\text{отд}} = n_{\text{прин}}\).
+      Критерий направления: \(\varphi^{0}_{\text{ок}} &gt; \varphi^{0}_{\text{восст}}\),
+      \(E = \varphi^{0}_{\text{ок}} - \varphi^{0}_{\text{восст}}\),
+      \(\Delta G = -nFE\), и процесс идёт самопроизвольно при \(\Delta G &lt; 0\).
+    </div>
+  </div>
+
+  <h2>6.1. Окисление, восстановление и два участника процесса</h2>
+
+  <p>Степень окисления — условный заряд атома в молекуле, вычисленный в
+  предположении, что все связи ионные (правила её расстановки разобраны в главе
+  <a href="t-bond">«Химическая связь»</a>). Сравнение степеней окисления слева и
+  справа от знака равенства — единственный надёжный признак, по которому реакцию
+  относят к окислительно-восстановительным.</p>
+
+  <p><b>Окисление</b> — процесс отдачи электронов атомом, молекулой или ионом:
+  Mg − 2e<sup>−</sup> → Mg<sup>2+</sup>, H<sub>2</sub> − 2e<sup>−</sup> →
+  2H<sup>+</sup>, 2I<sup>−</sup> − 2e<sup>−</sup> → I<sub>2</sub>. Степень
+  окисления при этом повышается. <b>Восстановление</b> — процесс присоединения
+  электронов: S + 2e<sup>−</sup> → S<sup>2−</sup>, Cl<sub>2</sub> +
+  2e<sup>−</sup> → 2Cl<sup>−</sup>, Cu<sup>2+</sup> + 2e<sup>−</sup> → Cu;
+  степень окисления понижается.</p>
+
+  <p>Частица, отдающая электроны, называется <b>восстановителем</b>, принимающая —
+  <b>окислителем</b>. Отсюда правило, которое студенты чаще всего выворачивают
+  наизнанку: <b>окислитель восстанавливается, восстановитель окисляется</b>.
+  Названия даны по тому, что частица делает с партнёром, а не с собой. Свободных
+  электронов в растворе нет, поэтому оба процесса идут строго одновременно, и
+  <b>число электронов, отданных восстановителем, равно числу электронов,
+  принятых окислителем</b>. Это равенство и есть уравнение, из которого находят
+  коэффициенты.</p>
+
+  <h2>6.2. Важнейшие окислители и восстановители</h2>
+
+  <p>Для простых веществ поведение читается прямо по периодической таблице
+  (глава <a href="t-atom">«Строение атома»</a>):</p>
+  <ul>
+    <li>в периоде слева направо восстановительные свойства падают, окислительные
+    растут и достигают максимума у элементов VII группы: в третьем периоде самый
+    сильный восстановитель — натрий, самый сильный окислитель — хлор;</li>
+    <li>в главной подгруппе сверху вниз восстановительные свойства растут,
+    окислительные снижаются: в VI группе самый сильный окислитель — кислород,
+    самый сильный восстановитель — полоний;</li>
+    <li>все металлы — <b>только восстановители</b>: они отдают электроны и в
+    соединениях имеют положительные степени окисления;</li>
+    <li>неметаллы, кроме фтора, способны и отдавать, и принимать электроны;
+    <b>фтор — только окислитель</b>, у него нет положительных степеней
+    окисления.</li>
+  </ul>
+
+  <p>Для сложных веществ всё определяет степень окисления ключевого элемента:</p>
+  <ul>
+    <li><b>Высшая (максимальная положительная)</b> — вещество может только
+    принимать электроны, это <b>только окислитель</b>:
+    KMn<sup>+7</sup>O<sub>4</sub>,
+    K<sub>2</sub>Cr<sub>2</sub><sup>+6</sup>O<sub>7</sub>,
+    HN<sup>+5</sup>O<sub>3</sub>,
+    H<sub>2</sub>S<sup>+6</sup>O<sub>4</sub>,
+    Pb<sup>+4</sup>O<sub>2</sub>.</li>
+    <li><b>Низшая (минимальная отрицательная)</b> — <b>только восстановитель</b>:
+    H<sub>2</sub>S<sup>−2</sup>, HCl<sup>−</sup>,
+    N<sup>−3</sup>H<sub>3</sub>, CaH<sub>2</sub><sup>−</sup>.</li>
+    <li><b>Промежуточная</b> — вещество двойственно и ведёт себя по обстановке.</li>
+  </ul>
+
+  <p>Классический ряд — кислородные кислоты хлора. В HCl хлор имеет степень
+  окисления −1, ниже некуда, поэтому HCl только восстановитель. В
+  HClO<sub>4</sub> хлор имеет +7, выше некуда — только окислитель. В HClO,
+  HClO<sub>2</sub>, HClO<sub>3</sub> степени окисления промежуточные (+1, +3, +5),
+  и хлор может выступать в обеих ролях; при этом с ростом степени окисления
+  окислительные свойства усиливаются, а восстановительные слабеют. Второй пример
+  двойственности — пероксид водорода, где кислород имеет промежуточную степень
+  окисления −1. С иодидом калия H<sub>2</sub>O<sub>2</sub> ведёт себя как
+  окислитель:</p>
+
+  <div class="rx"><span class="cf">H<sub>2</sub>O<sub>2</sub> + 2KI + H<sub>2</sub>SO<sub>4</sub> = I<sub>2</sub> + K<sub>2</sub>SO<sub>4</sub> + 2H<sub>2</sub>O</span></div>
+
+  <p>а с дихроматом калия — уже как восстановитель, отдавая электроны и выделяя
+  кислород:</p>
+
+  <div class="rx"><span class="cf">K<sub>2</sub>Cr<sub>2</sub>O<sub>7</sub> + 4H<sub>2</sub>SO<sub>4</sub> + 3H<sub>2</sub>O<sub>2</sub> = Cr<sub>2</sub>(SO<sub>4</sub>)<sub>3</sub> + K<sub>2</sub>SO<sub>4</sub> + 3O<sub>2</sub>↑ + 7H<sub>2</sub>O</span></div>
+
+  <h2>6.3. Типы окислительно-восстановительных реакций</h2>
+
+  <p><b>Межмолекулярные</b> — окислитель и восстановитель находятся в разных
+  веществах. Это самый частый случай:</p>
+
+  <div class="rx"><span class="cf">4HCl<sup>−</sup> + Mn<sup>+4</sup>O<sub>2</sub> = Cl<sub>2</sub><sup>0</sup> + Mn<sup>+2</sup>Cl<sub>2</sub> + 2H<sub>2</sub>O</span></div>
+  <p class="small">2Cl<sup>−</sup> − 2e<sup>−</sup> → Cl<sub>2</sub><sup>0</sup> — окисление;
+  Mn<sup>+4</sup> + 2e<sup>−</sup> → Mn<sup>+2</sup> — восстановление.</p>
+
+  <p><b>Внутримолекулярные</b> — окислитель и восстановитель находятся в одном
+  веществе; более положительный атом окисляет менее положительный. Типичны для
+  реакций разложения:</p>
+
+  <div class="rx"><span class="cf">2NaN<sup>+5</sup>O<sub>3</sub><sup>−2</sup> = 2NaN<sup>+3</sup>O<sub>2</sub> + O<sub>2</sub><sup>0</sup>↑</span></div>
+  <p class="small">2O<sup>−2</sup> − 4e<sup>−</sup> → O<sub>2</sub><sup>0</sup> — окисление;
+  N<sup>+5</sup> + 2e<sup>−</sup> → N<sup>+3</sup> — восстановление.</p>
+
+  <p><b>Диспропорционирование</b> (самоокисление-самовосстановление) — окислителем
+  и восстановителем служат атомы <i>одного</i> элемента в <i>промежуточной</i>
+  степени окисления; часть их окисляется, часть восстанавливается:</p>
+
+  <div class="rx"><span class="cf">3K<sub>2</sub>Mn<sup>+6</sup>O<sub>4</sub> + 2H<sub>2</sub>O = 2KMn<sup>+7</sup>O<sub>4</sub> + Mn<sup>+4</sup>O<sub>2</sub>↓ + 4KOH</span></div>
+  <p class="small">Mn<sup>+6</sup> − 1e<sup>−</sup> → Mn<sup>+7</sup> — окисление;
+  Mn<sup>+6</sup> + 2e<sup>−</sup> → Mn<sup>+4</sup> — восстановление.
+  Так же ведёт себя хлор в воде: Cl<sub>2</sub> + H<sub>2</sub>O = HCl<sup>+1</sup>O + HCl<sup>−1</sup>.</p>
+
+  <p><b>Сопропорционирование</b> — обратный случай: один элемент в двух разных
+  степенях окисления даёт продукт с промежуточной степенью окисления:</p>
+
+  <div class="rx"><span class="cf">2H<sub>2</sub>S<sup>−2</sup> + S<sup>+4</sup>O<sub>2</sub> = 3S<sup>0</sup>↓ + 2H<sub>2</sub>O</span></div>
+  <p class="small">S<sup>−2</sup> − 2e<sup>−</sup> → S<sup>0</sup> (окисление, множитель 2);
+  S<sup>+4</sup> + 4e<sup>−</sup> → S<sup>0</sup> (восстановление, множитель 1).
+  Сюда же относится разложение нитрата аммония
+  N<sup>−3</sup>H<sub>4</sub>N<sup>+5</sup>O<sub>3</sub> = N<sub>2</sub><sup>+1</sup>O↑ + 2H<sub>2</sub>O —
+  реакция одновременно внутримолекулярная и сопропорционирования.</p>
+
+  <h2>6.4. Метод электронного баланса</h2>
+
+  <p>Метод опирается на единственное утверждение: сколько электронов отдано,
+  столько и принято. Порядок действий всегда один и тот же — девять шагов.</p>
+
+  <ol>
+    <li>Записать схему процесса (реагенты и продукты, без коэффициентов).</li>
+    <li>Расставить степени окисления всех атомов слева и справа.</li>
+    <li>Найти элементы, у которых степень окисления изменилась, и записать для
+    них электронные уравнения — отдельно окисление, отдельно восстановление.</li>
+    <li>Найти наименьшее общее кратное (НОК) числа отданных и принятых
+    электронов.</li>
+    <li>Разделить НОК на число электронов в уравнении окисления — получить
+    множитель при восстановителе.</li>
+    <li>Разделить НОК на число электронов в уравнении восстановления — получить
+    множитель при окислителе.</li>
+    <li>Переписать электронные уравнения с найденными множителями.</li>
+    <li>Перенести множители в основное уравнение как коэффициенты при
+    восстановителе и окислителе и дописать остальные коэффициенты.</li>
+    <li>Проверить уравнение по числу атомов элемента, <i>не менявшего</i> степень
+    окисления (обычно кислорода или водорода).</li>
+  </ol>
+
+  <h3>Пример 1. Каталитическое окисление аммиака</h3>
+  <p>Схема: NH<sub>3</sub> + O<sub>2</sub> → NO + H<sub>2</sub>O; степени
+  окисления: N<sup>−3</sup>H<sub>3</sub><sup>+1</sup> +
+  O<sub>2</sub><sup>0</sup> → N<sup>+2</sup>O<sup>−2</sup> +
+  H<sub>2</sub><sup>+1</sup>O<sup>−2</sup>. Меняются азот (от −3 до +2,
+  окисление) и кислород (от 0 до −2, восстановление):</p>
+  <table class="dt">
+    <tr><th>Электронное уравнение</th><th class="num">Электронов</th><th class="num">НОК</th><th class="num">Множитель</th></tr>
+    <tr><td>N<sup>−3</sup> − 5e<sup>−</sup> → N<sup>+2</sup> (окисление)</td><td class="num">5</td><td class="num">20</td><td class="num">4</td></tr>
+    <tr><td>O<sub>2</sub><sup>0</sup> + 4e<sup>−</sup> → 2O<sup>−2</sup> (восстановление)</td><td class="num">4</td><td class="num">20</td><td class="num">5</td></tr>
+  </table>
+  <div class="rx"><span class="cf">4NH<sub>3</sub> + 5O<sub>2</sub> = 4NO + 6H<sub>2</sub>O</span></div>
+  <p>Проверка по водороду, степень окисления которого не менялась: слева
+  <span class="subst">4 · 3 = 12</span>, справа <span class="subst">6 · 2 = 12</span> —
+  <b>уравнение верно</b>.</p>
+
+  <h3>Пример 2. Сероводород и подкисленный перманганат калия</h3>
+  <p>Схема: H<sub>2</sub>S + KMnO<sub>4</sub> + H<sub>2</sub>SO<sub>4</sub> → S +
+  MnSO<sub>4</sub> + K<sub>2</sub>SO<sub>4</sub> + H<sub>2</sub>O. Меняются сера
+  сероводорода (−2 → 0) и марганец (+7 → +2); сера серной кислоты остаётся в
+  степени окисления +6 и в балансе не участвует.</p>
+  <table class="dt">
+    <tr><th>Электронное уравнение</th><th class="num">Электронов</th><th class="num">НОК</th><th class="num">Множитель</th></tr>
+    <tr><td>S<sup>−2</sup> − 2e<sup>−</sup> → S<sup>0</sup> (окисление)</td><td class="num">2</td><td class="num">10</td><td class="num">5</td></tr>
+    <tr><td>Mn<sup>+7</sup> + 5e<sup>−</sup> → Mn<sup>+2</sup> (восстановление)</td><td class="num">5</td><td class="num">10</td><td class="num">2</td></tr>
+  </table>
+  <div class="rx"><span class="cf">5H<sub>2</sub>S + 2KMnO<sub>4</sub> + 3H<sub>2</sub>SO<sub>4</sub> = 5S↓ + 2MnSO<sub>4</sub> + K<sub>2</sub>SO<sub>4</sub> + 8H<sub>2</sub>O</span></div>
+  <p>Проверка по кислороду: слева <span class="subst">2 · 4 + 3 · 4 = 20</span>,
+  справа <span class="subst">2 · 4 + 4 + 8 = 20</span> — <b>уравнение верно</b>.
+  Внешний признак реакции в пробирке: малиновый раствор обесцвечивается, выпадает
+  светло-жёлтая муть свободной серы.</p>
+
+  <div class="panel">
+    <svg class="geo-board" viewBox="0 0 640 230" style="max-width:640px" role="img"
+         aria-label="Схема электронного баланса: восстановитель отдаёт 10 электронов окислителю, множители 5 и 2">
+      <text class="lbl b" x="320" y="30" text-anchor="middle">Электронный баланс реакции H<tspan baseline-shift="sub" font-size="8">2</tspan>S с KMnO<tspan baseline-shift="sub" font-size="8">4</tspan></text>
+
+      <rect class="ln-thin blue fill-soft" x="20" y="44" width="190" height="54" rx="8"/>
+      <rect class="ln-thin gray fill-gray" x="250" y="44" width="140" height="54" rx="8"/>
+      <rect class="ln-thin red fill-red" x="430" y="44" width="190" height="54" rx="8"/>
+
+      <text class="lbl b blue" x="115" y="66" text-anchor="middle">S<tspan baseline-shift="super" font-size="8">−2</tspan> − 2e<tspan baseline-shift="super" font-size="8">−</tspan> → S<tspan baseline-shift="super" font-size="8">0</tspan></text>
+      <text class="lbl blue" x="115" y="86" text-anchor="middle">восстановитель</text>
+
+      <text class="lbl b" x="320" y="66" text-anchor="middle">НОК = 10</text>
+      <text class="lbl gray" x="320" y="86" text-anchor="middle">2 и 5</text>
+
+      <text class="lbl b red" x="525" y="66" text-anchor="middle">Mn<tspan baseline-shift="super" font-size="8">+7</tspan> + 5e<tspan baseline-shift="super" font-size="8">−</tspan> → Mn<tspan baseline-shift="super" font-size="8">+2</tspan></text>
+      <text class="lbl red" x="525" y="86" text-anchor="middle">окислитель</text>
+
+      <text class="lbl" x="115" y="116" text-anchor="middle">множитель 10 : 2 = 5</text>
+      <text class="lbl" x="525" y="116" text-anchor="middle">множитель 10 : 5 = 2</text>
+
+      <path class="ln red" d="M115 128 V156 H525 V128" marker-end="url(#arrR)"/>
+      <text class="lbl red" x="320" y="150" text-anchor="middle">10 электронов</text>
+
+      <text class="lbl b" x="320" y="186" text-anchor="middle">5H<tspan baseline-shift="sub" font-size="8">2</tspan>S + 2KMnO<tspan baseline-shift="sub" font-size="8">4</tspan> + 3H<tspan baseline-shift="sub" font-size="8">2</tspan>SO<tspan baseline-shift="sub" font-size="8">4</tspan> = 5S + 2MnSO<tspan baseline-shift="sub" font-size="8">4</tspan> + K<tspan baseline-shift="sub" font-size="8">2</tspan>SO<tspan baseline-shift="sub" font-size="8">4</tspan> + 8H<tspan baseline-shift="sub" font-size="8">2</tspan>O</text>
+      <text class="lbl gray" x="320" y="208" text-anchor="middle">проверка по кислороду: слева 8 + 12 = 20, справа 8 + 4 + 8 = 20</text>
+    </svg>
+    <div class="caption">Множители 5 и 2 получены делением НОК на число электронов
+    в каждой полуреакции; ровно они и становятся коэффициентами при
+    восстановителе H<sub>2</sub>S и окислителе KMnO<sub>4</sub>. Стрелка
+    показывает перенос 10 электронов — величину, одинаковую для обеих
+    полуреакций.</div>
+  </div>
+
+  <h3>Пример 3. Дихромат калия и соляная кислота</h3>
+  <p>Схема: K<sub>2</sub>Cr<sub>2</sub>O<sub>7</sub> + HCl → CrCl<sub>3</sub> +
+  Cl<sub>2</sub> + KCl + H<sub>2</sub>O. Особенность в том, что соляная кислота
+  расходуется двояко: часть хлорид-ионов окисляется до Cl<sub>2</sub>, а
+  остальные уходят на связывание продуктов в CrCl<sub>3</sub> и KCl. Учитываем
+  также, что в молекуле K<sub>2</sub>Cr<sub>2</sub>O<sub>7</sub> два атома хрома
+  и каждый принимает по 3 электрона:</p>
+  <table class="dt">
+    <tr><th>Электронное уравнение</th><th class="num">Электронов</th><th class="num">НОК</th><th class="num">Множитель</th></tr>
+    <tr><td>2Cl<sup>−</sup> − 2e<sup>−</sup> → Cl<sub>2</sub><sup>0</sup> (окисление)</td><td class="num">2</td><td class="num">6</td><td class="num">3</td></tr>
+    <tr><td>2Cr<sup>+6</sup> + 6e<sup>−</sup> → 2Cr<sup>+3</sup> (восстановление)</td><td class="num">6</td><td class="num">6</td><td class="num">1</td></tr>
+  </table>
+  <p>Коэффициент при окислителе равен 1, а коэффициент при HCl складывается из
+  <span class="subst">2 · 3 = 6</span> хлорид-ионов, ушедших на окисление, и
+  <span class="subst">2 · 3 + 2 = 8</span> хлорид-ионов, связавших два
+  Cr<sup>3+</sup> и два K<sup>+</sup>; итого <b>14</b>:</p>
+  <div class="rx"><span class="cf">K<sub>2</sub>Cr<sub>2</sub>O<sub>7</sub> + 14HCl = 2CrCl<sub>3</sub> + 3Cl<sub>2</sub>↑ + 2KCl + 7H<sub>2</sub>O</span></div>
+  <p>Проверка по кислороду: слева <span class="subst">7</span>, справа
+  <span class="subst">7</span> — <b>уравнение верно</b>. Разобранные до конца
+  задачи на баланс собраны на странице <a href="p-electrochem">«ОВР, ток,
+  коррозия»</a>.</p>
+
+  <div class="note tip">Шаг 9 не формальность. Если по неменяющемуся элементу
+  сходится, ошибиться в множителях уже практически невозможно; если не сходится,
+  ищите ошибку не в множителях, а в шаге 2 — в степенях окисления.</div>
+
+  <h2>6.5. Влияние среды на продукты реакции</h2>
+
+  <p>Один и тот же окислитель в разной среде даёт разные продукты, а иногда и
+  вовсе не работает: ион MnO<sub>4</sub><sup>−</sup> окисляет Cl<sup>−</sup> до
+  свободного хлора в кислой среде, но не делает этого в нейтральной и щелочной.
+  Показательна серия опытов с перманганатом калия и сульфитом натрия — малиновый
+  раствор ведёт себя тремя разными способами.</p>
+
+  <div class="rx"><span class="cf">2KMnO<sub>4</sub> + 3H<sub>2</sub>SO<sub>4</sub> + 5Na<sub>2</sub>SO<sub>3</sub> = 2MnSO<sub>4</sub> + 5Na<sub>2</sub>SO<sub>4</sub> + K<sub>2</sub>SO<sub>4</sub> + 3H<sub>2</sub>O</span></div>
+  <div class="rx"><span class="cf">2KMnO<sub>4</sub> + H<sub>2</sub>O + 3Na<sub>2</sub>SO<sub>3</sub> = 2MnO<sub>2</sub>↓ + 3Na<sub>2</sub>SO<sub>4</sub> + 2KOH</span></div>
+  <div class="rx"><span class="cf">2KMnO<sub>4</sub> + 2KOH + Na<sub>2</sub>SO<sub>3</sub> = 2K<sub>2</sub>MnO<sub>4</sub> + Na<sub>2</sub>SO<sub>4</sub> + H<sub>2</sub>O</span></div>
+
+  <div class="panel">
+    <svg class="geo-board" viewBox="0 0 640 252" style="max-width:640px" role="img"
+         aria-label="Три пробирки: восстановление перманганата в кислой, нейтральной и сильнощелочной среде">
+      <text class="lbl b" x="320" y="26" text-anchor="middle">Восстановление KMnO<tspan baseline-shift="sub" font-size="8">4</tspan> в разных средах</text>
+
+      <text class="lbl b red" x="110" y="52" text-anchor="middle">кислая среда</text>
+      <text class="lbl b gray" x="320" y="52" text-anchor="middle">нейтральная и слабощелочная</text>
+      <text class="lbl b green" x="530" y="52" text-anchor="middle">сильнощелочная</text>
+
+      <rect class="ln fill-white" x="82" y="66" width="56" height="86" rx="10"/>
+      <rect class="ln fill-gray" x="292" y="66" width="56" height="86" rx="10"/>
+      <rect class="ln fill-green" x="502" y="66" width="56" height="86" rx="10"/>
+
+      <text class="lbl b" x="110" y="112" text-anchor="middle">Mn<tspan baseline-shift="super" font-size="8">2+</tspan></text>
+      <text class="lbl b" x="320" y="112" text-anchor="middle">MnO<tspan baseline-shift="sub" font-size="8">2</tspan></text>
+      <text class="lbl b" x="530" y="112" text-anchor="middle">MnO<tspan baseline-shift="sub" font-size="8">4</tspan><tspan baseline-shift="super" font-size="8">2−</tspan></text>
+
+      <text class="lbl" x="110" y="172" text-anchor="middle">раствор обесцвечивается</text>
+      <text class="lbl" x="320" y="172" text-anchor="middle">бурый осадок</text>
+      <text class="lbl" x="530" y="172" text-anchor="middle">зелёный раствор</text>
+
+      <text class="lbl gray" x="110" y="192" text-anchor="middle">pH &lt; 7 (H<tspan baseline-shift="sub" font-size="8">2</tspan>SO<tspan baseline-shift="sub" font-size="8">4</tspan>)</text>
+      <text class="lbl gray" x="320" y="192" text-anchor="middle">pH ≈ 7…9 (H<tspan baseline-shift="sub" font-size="8">2</tspan>O)</text>
+      <text class="lbl gray" x="530" y="192" text-anchor="middle">pH &gt; 12 (KOH)</text>
+
+      <text class="lbl b" x="110" y="212" text-anchor="middle">Mn<tspan baseline-shift="super" font-size="8">+7</tspan> принимает 5e<tspan baseline-shift="super" font-size="8">−</tspan></text>
+      <text class="lbl b" x="320" y="212" text-anchor="middle">Mn<tspan baseline-shift="super" font-size="8">+7</tspan> принимает 3e<tspan baseline-shift="super" font-size="8">−</tspan></text>
+      <text class="lbl b" x="530" y="212" text-anchor="middle">Mn<tspan baseline-shift="super" font-size="8">+7</tspan> принимает 1e<tspan baseline-shift="super" font-size="8">−</tspan></text>
+
+      <path class="ln gray" d="M60 236 H580" marker-end="url(#arrE)"/>
+      <text class="lbl gray" x="320" y="230" text-anchor="middle">рост pH среды</text>
+    </svg>
+    <div class="caption">Чем щелочнее среда, тем меньше электронов принимает
+    марганец и тем менее глубоко восстанавливается перманганат: от Mn<sup>2+</sup>
+    в кислой среде до манганат-иона MnO<sub>4</sub><sup>2−</sup> в
+    сильнощелочной. Цвет раствора — рабочий индикатор того, какой из трёх
+    вариантов реализовался.</div>
+  </div>
+
+  <h2>6.6. Стандартный окислительно-восстановительный потенциал</h2>
+
+  <p>Наличия окислителя и восстановителя ещё недостаточно: далеко не любая пара
+  реагирует. Количественная мера окислительной способности — <b>стандартный
+  окислительно-восстановительный потенциал</b> \(\varphi^{0}\), измеренный
+  относительно стандартного водородного электрода при 298 K, концентрации
+  1 моль/л и давлении газов 1 атм (устройство электрода разобрано в главе
+  <a href="t-electrochem">«Электрохимия»</a>). Чем больше алгебраическая величина
+  \(\varphi^{0}\), тем сильнее окислитель в левой части полуреакции и тем слабее
+  восстановитель в правой.</p>
+
+  <table class="dt">
+    <tr><th>Процесс</th><th class="num">\(\varphi^{0}\), В</th><th>Процесс</th><th class="num">\(\varphi^{0}\), В</th></tr>
+    <tr><td>F<sub>2</sub> + 2e<sup>−</sup> ⇄ 2F<sup>−</sup></td><td class="num">+2,87</td>
+        <td>Fe<sup>3+</sup> + e<sup>−</sup> ⇄ Fe<sup>2+</sup></td><td class="num">+0,77</td></tr>
+    <tr><td>MnO<sub>4</sub><sup>−</sup> + 8H<sup>+</sup> + 5e<sup>−</sup> ⇄ Mn<sup>2+</sup> + 4H<sub>2</sub>O</td><td class="num">+1,51</td>
+        <td>I<sub>2</sub> + 2e<sup>−</sup> ⇄ 2I<sup>−</sup></td><td class="num">+0,54</td></tr>
+    <tr><td>Cl<sub>2</sub> + 2e<sup>−</sup> ⇄ 2Cl<sup>−</sup></td><td class="num">+1,36</td>
+        <td>Cu<sup>2+</sup> + 2e<sup>−</sup> ⇄ Cu</td><td class="num">+0,34</td></tr>
+    <tr><td>Cr<sub>2</sub>O<sub>7</sub><sup>2−</sup> + 14H<sup>+</sup> + 6e<sup>−</sup> ⇄ 2Cr<sup>3+</sup> + 7H<sub>2</sub>O</td><td class="num">+1,33</td>
+        <td>2H<sup>+</sup> + 2e<sup>−</sup> ⇄ H<sub>2</sub></td><td class="num">0,00</td></tr>
+    <tr><td>O<sub>2</sub> + 4H<sup>+</sup> + 4e<sup>−</sup> ⇄ 2H<sub>2</sub>O</td><td class="num">+1,23</td>
+        <td>Pb<sup>2+</sup> + 2e<sup>−</sup> ⇄ Pb</td><td class="num">−0,13</td></tr>
+    <tr><td>Br<sub>2</sub> + 2e<sup>−</sup> ⇄ 2Br<sup>−</sup></td><td class="num">+1,07</td>
+        <td>Fe<sup>2+</sup> + 2e<sup>−</sup> ⇄ Fe</td><td class="num">−0,44</td></tr>
+    <tr><td>NO<sub>3</sub><sup>−</sup> + 4H<sup>+</sup> + 3e<sup>−</sup> ⇄ NO + 2H<sub>2</sub>O</td><td class="num">+0,96</td>
+        <td>Zn<sup>2+</sup> + 2e<sup>−</sup> ⇄ Zn</td><td class="num">−0,76</td></tr>
+    <tr><td>Ag<sup>+</sup> + e<sup>−</sup> ⇄ Ag</td><td class="num">+0,80</td>
+        <td>Mg<sup>2+</sup> + 2e<sup>−</sup> ⇄ Mg</td><td class="num">−2,36</td></tr>
+    <tr><td>&nbsp;</td><td class="num">&nbsp;</td>
+        <td>Li<sup>+</sup> + e<sup>−</sup> ⇄ Li</td><td class="num">−3,04</td></tr>
+  </table>
+
+  <p>Крайние строки таблицы задают границы: фтор с \(\varphi^{0} = +2{,}87\) В —
+  самый сильный из практически применяемых окислителей, а ион F<sup>−</sup> —
+  самый слабый восстановитель; литий с \(\varphi^{0} = -3{,}04\) В — самый
+  сильный восстановитель, а ион Li<sup>+</sup> — самый слабый окислитель.</p>
+
+  <p><b>Критерий возможности реакции:</b> процесс идёт, если потенциал
+  окислителя больше потенциала восстановителя. Сравним две записи:</p>
+  <div class="rx"><span class="cf">2KI + F<sub>2</sub> → 2KF + I<sub>2</sub></span></div>
+  <div class="rx"><span class="cf">2KF + I<sub>2</sub> ≠ 2KI + F<sub>2</sub></span></div>
+  <p>В первой окислитель F<sub>2</sub> (+2,87 В), восстановитель I<sup>−</sup>
+  (+0,54 В) — реакция возможна. Во второй роли меняются местами: окислителем стал
+  бы I<sub>2</sub> (+0,54 В), восстановителем F<sup>−</sup> (+2,87 В), и
+  \(\varphi^{0}_{\text{ок}} &lt; \varphi^{0}_{\text{восст}}\) — реакция
+  невозможна.</p>
+
+  <p>Формально критерий тот же, что в главе <a href="t-thermo">«Термодинамика»</a>.
+  Разность потенциалов \(E = \varphi^{0}_{\text{ок}} - \varphi^{0}_{\text{восст}}\)
+  связана с энергией Гиббса соотношением</p>
+
+  $$ \Delta G = -nFE, $$
+
+  <p>где \(n\) — число перенесённых электронов, \(F = 96485\) Кл/моль. При
+  \(E &gt; 0\) получается \(\Delta G &lt; 0\), то есть процесс самопроизволен.
+  Для пары иод — фтор \(E = 2{,}87 - 0{,}54 =\) <b>2,33 В</b>, и при \(n = 2\)
+  выходит \(\Delta G =\)
+  <span class="subst">−2 · 96485 · 2,33</span> = <b>−450 кДж/моль</b> — запас
+  более чем достаточный. Практическое применение этой связи — расчёт ЭДС
+  гальванического элемента в главе <a href="t-electrochem">«Электрохимия»</a>.</p>
+
+  <div class="panel">
+    <svg class="geo-board" viewBox="0 0 640 400" style="max-width:640px" role="img"
+         aria-label="Вертикальная шкала стандартных потенциалов от плюс 2,87 до минус 3,04 вольта с зонами сильных окислителей и восстановителей">
+      <text class="lbl b" x="250" y="30" text-anchor="middle">φ°, В</text>
+
+      <rect class="ln-thin red fill-red" x="10" y="50" width="180" height="56" rx="8"/>
+      <text class="lbl b red" x="14" y="68">Сильные окислители</text>
+      <text class="lbl red" x="14" y="84">F<tspan baseline-shift="sub" font-size="8">2</tspan>, MnO<tspan baseline-shift="sub" font-size="8">4</tspan><tspan baseline-shift="super" font-size="8">−</tspan>, Cr<tspan baseline-shift="sub" font-size="8">2</tspan>O<tspan baseline-shift="sub" font-size="8">7</tspan><tspan baseline-shift="super" font-size="8">2−</tspan></text>
+      <text class="lbl red" x="14" y="100">принимают электроны</text>
+
+      <text class="lbl b" x="14" y="196">Реакция возможна,</text>
+      <text class="lbl" x="14" y="212">если окислитель</text>
+      <text class="lbl" x="14" y="228">стоит в таблице выше</text>
+      <text class="lbl" x="14" y="244">восстановителя</text>
+
+      <rect class="ln-thin blue fill-soft" x="10" y="286" width="180" height="56" rx="8"/>
+      <text class="lbl b blue" x="14" y="304">Сильные восстановители</text>
+      <text class="lbl blue" x="14" y="320">Zn, Mg, Li</text>
+      <text class="lbl blue" x="14" y="336">отдают электроны</text>
+
+      <path class="ln gray" d="M214 56 V344" marker-end="url(#arrE)"/>
+
+      <path class="ln-axis" d="M250 40 V384"/>
+      <g class="ln-thin">
+        <path d="M244 44 H256"/>
+        <path d="M244 98 H256"/>
+        <path d="M244 152 H256"/>
+        <path d="M244 207 H256"/>
+        <path d="M244 261 H256"/>
+        <path d="M244 315 H256"/>
+        <path d="M244 369 H256"/>
+      </g>
+      <g class="lbl-axis" text-anchor="end">
+        <text x="240" y="48">+3</text>
+        <text x="240" y="102">+2</text>
+        <text x="240" y="156">+1</text>
+        <text x="240" y="211">0</text>
+        <text x="240" y="265">−1</text>
+        <text x="240" y="319">−2</text>
+        <text x="240" y="373">−3</text>
+      </g>
+
+      <g class="pt red">
+        <circle cx="250" cy="51" r="4"/>
+        <circle cx="250" cy="125" r="4"/>
+        <circle cx="250" cy="134" r="4"/>
+        <circle cx="250" cy="149" r="4"/>
+      </g>
+      <g class="pt">
+        <circle cx="250" cy="163" r="4"/>
+        <circle cx="250" cy="177" r="4"/>
+        <circle cx="250" cy="188" r="4"/>
+        <circle cx="250" cy="207" r="4"/>
+      </g>
+      <g class="pt blue">
+        <circle cx="250" cy="230" r="4"/>
+        <circle cx="250" cy="248" r="4"/>
+        <circle cx="250" cy="334" r="4"/>
+        <circle cx="250" cy="371" r="4"/>
+      </g>
+
+      <g class="ln-thin gray">
+        <path d="M256 51 L280 42 H296"/>
+        <path d="M256 125 L280 121 H296"/>
+        <path d="M256 134 L280 137 H296"/>
+        <path d="M256 149 L280 154 H296"/>
+        <path d="M256 163 L280 170 H296"/>
+        <path d="M256 177 L280 187 H296"/>
+        <path d="M256 188 L280 203 H296"/>
+        <path d="M256 207 L280 220 H296"/>
+        <path d="M256 230 L280 236 H296"/>
+        <path d="M256 248 L280 253 H296"/>
+        <path d="M256 334 L280 331 H296"/>
+        <path d="M256 371 L280 367 H296"/>
+      </g>
+
+      <g class="lbl">
+        <text class="lbl red" x="300" y="46">F<tspan baseline-shift="sub" font-size="8">2</tspan> + 2e<tspan baseline-shift="super" font-size="8">−</tspan> ⇄ 2F<tspan baseline-shift="super" font-size="8">−</tspan>  +2,87</text>
+        <text class="lbl red" x="300" y="125">MnO<tspan baseline-shift="sub" font-size="8">4</tspan><tspan baseline-shift="super" font-size="8">−</tspan> (H<tspan baseline-shift="super" font-size="8">+</tspan>) ⇄ Mn<tspan baseline-shift="super" font-size="8">2+</tspan>  +1,51</text>
+        <text class="lbl red" x="300" y="141">Cr<tspan baseline-shift="sub" font-size="8">2</tspan>O<tspan baseline-shift="sub" font-size="8">7</tspan><tspan baseline-shift="super" font-size="8">2−</tspan> (H<tspan baseline-shift="super" font-size="8">+</tspan>) ⇄ 2Cr<tspan baseline-shift="super" font-size="8">3+</tspan>  +1,33</text>
+        <text class="lbl red" x="300" y="158">Br<tspan baseline-shift="sub" font-size="8">2</tspan> + 2e<tspan baseline-shift="super" font-size="8">−</tspan> ⇄ 2Br<tspan baseline-shift="super" font-size="8">−</tspan>  +1,07</text>
+        <text x="300" y="174">Ag<tspan baseline-shift="super" font-size="8">+</tspan> + e<tspan baseline-shift="super" font-size="8">−</tspan> ⇄ Ag  +0,80</text>
+        <text x="300" y="191">I<tspan baseline-shift="sub" font-size="8">2</tspan> + 2e<tspan baseline-shift="super" font-size="8">−</tspan> ⇄ 2I<tspan baseline-shift="super" font-size="8">−</tspan>  +0,54</text>
+        <text x="300" y="207">Cu<tspan baseline-shift="super" font-size="8">2+</tspan> + 2e<tspan baseline-shift="super" font-size="8">−</tspan> ⇄ Cu  +0,34</text>
+        <text class="lbl b" x="300" y="224">2H<tspan baseline-shift="super" font-size="8">+</tspan> + 2e<tspan baseline-shift="super" font-size="8">−</tspan> ⇄ H<tspan baseline-shift="sub" font-size="8">2</tspan> · 0,00</text>
+        <text class="lbl blue" x="300" y="240">Fe<tspan baseline-shift="super" font-size="8">2+</tspan> + 2e<tspan baseline-shift="super" font-size="8">−</tspan> ⇄ Fe  −0,44</text>
+        <text class="lbl blue" x="300" y="257">Zn<tspan baseline-shift="super" font-size="8">2+</tspan> + 2e<tspan baseline-shift="super" font-size="8">−</tspan> ⇄ Zn  −0,76</text>
+        <text class="lbl blue" x="300" y="335">Mg<tspan baseline-shift="super" font-size="8">2+</tspan> + 2e<tspan baseline-shift="super" font-size="8">−</tspan> ⇄ Mg  −2,36</text>
+        <text class="lbl blue" x="300" y="372">Li<tspan baseline-shift="super" font-size="8">+</tspan> + e<tspan baseline-shift="super" font-size="8">−</tspan> ⇄ Li  −3,04</text>
+      </g>
+    </svg>
+    <div class="caption">Шкала стандартных потенциалов. Реакция идёт «сверху
+    вниз»: окислитель берётся из верхней части шкалы, восстановитель — из
+    нижней, и чем больше вертикальный разрыв между ними, тем больше ЭДС и тем
+    отрицательнее \(\Delta G\). Нулевая отметка — водородный электрод, по
+    которому откалибрована вся шкала.</div>
+  </div>
+
+  <h2>6.7. Ряд напряжений металлов</h2>
+
+  <p>Если из общей таблицы выписать только процессы вида
+  Me<sup>n+</sup> + ne<sup>−</sup> ⇄ Me и расположить металлы по возрастанию
+  \(\varphi^{0}\), получится <b>ряд напряжений</b> (ряд стандартных электродных
+  потенциалов): Li, K, Ca, Na, Mg, Al, Mn, Zn, Cr, Fe, Ni, Sn, Pb, <b>H</b>, Cu,
+  Ag, Hg, Pt, Au. Из него следуют три практических правила.</p>
+
+  <ul>
+    <li><b>Вытеснение из растворов солей.</b> Металл вытесняет из раствора соли
+    любой металл, стоящий в ряду правее. Стальная стружка в растворе медного
+    купороса краснеет — на ней осаждается медь:
+    <span class="cf">CuSO<sub>4</sub> + Fe = FeSO<sub>4</sub> + Cu↓</span>
+    (\(\varphi^{0}\) железа −0,44 В меньше, чем у меди +0,34 В). Обратная
+    реакция невозможна.</li>
+    <li><b>Взаимодействие с кислотами-неокислителями.</b> Водород в ряду —
+    граница: металлы левее его вытесняют водород из разбавленных HCl и
+    H<sub>2</sub>SO<sub>4</sub>
+    (<span class="cf">Zn + 2HCl = ZnCl<sub>2</sub> + H<sub>2</sub>↑</span>),
+    металлы правее — не вытесняют, поэтому
+    <span class="cf">Cu + HCl ≠</span> реакции не даёт. С кислотами-окислителями
+    (HNO<sub>3</sub>, концентрированная H<sub>2</sub>SO<sub>4</sub>) медь всё же
+    реагирует, но там окислителем служит не H<sup>+</sup>, а анион кислоты.</li>
+    <li><b>Устойчивость в природе.</b> Металлы левее водорода встречаются только
+    в виде соединений, а золото и платина — в самородном состоянии. Это же
+    объясняет, почему сталь в морской воде корродирует, а бронзовый винт — нет:
+    подробности в главе <a href="t-corrosion">«Коррозия металлов»</a>.</li>
+  </ul>
+
+  <div class="note warn">Ряд напряжений составлен для водных растворов при
+  стандартных условиях. Он ничего не говорит о <i>скорости</i>: алюминий стоит
+  далеко левее водорода, но защищён плотной оксидной плёнкой и в обычных условиях
+  с водой не реагирует. Термодинамика разрешает, кинетика (глава
+  <a href="t-kinetics">«Кинетика и равновесие»</a>) определяет темп.</div>
+
+  <details class="q">
+    <summary>Почему в реакции 5H<sub>2</sub>S + 2KMnO<sub>4</sub> + 3H<sub>2</sub>SO<sub>4</sub> сера серной кислоты не попадает в электронный баланс?</summary>
+    <p>Потому что её степень окисления не меняется: в H<sub>2</sub>SO<sub>4</sub>
+    сера имеет +6, и в MnSO<sub>4</sub>, K<sub>2</sub>SO<sub>4</sub> она тоже +6.
+    Серная кислота здесь играет роль среды и связывает катионы в сульфаты.
+    Окисляется только сера сероводорода, у которой степень окисления −2.</p>
+  </details>
+
+  <details class="q">
+    <summary>К какому типу ОВР относится реакция 3K<sub>2</sub>MnO<sub>4</sub> + 2H<sub>2</sub>O = 2KMnO<sub>4</sub> + MnO<sub>2</sub> + 4KOH?</summary>
+    <p>К диспропорционированию (самоокислению-самовосстановлению): и окислителем,
+    и восстановителем служит марганец в промежуточной степени окисления +6. Часть
+    атомов отдаёт по одному электрону и переходит в +7, часть принимает по два и
+    переходит в +4. Множители 1 и 2 дают три атома марганца в левой части —
+    отсюда коэффициент 3.</p>
+  </details>
+
+  <details class="q">
+    <summary>Пойдёт ли реакция 2KBr + I<sub>2</sub> = 2KI + Br<sub>2</sub>?</summary>
+    <p>Нет. Здесь окислителем был бы иод (\(\varphi^{0} = +0{,}54\) В), а
+    восстановителем — бромид-ион (\(\varphi^{0}\) пары
+    Br<sub>2</sub>/Br<sup>−</sup> равен +1,07 В). Потенциал окислителя меньше
+    потенциала восстановителя, значит \(E &lt; 0\) и \(\Delta G &gt; 0\).
+    Самопроизвольно идёт обратный процесс: бром вытесняет иод из иодидов.</p>
+  </details>
+
+  <details class="q">
+    <summary>Почему пероксид водорода может быть и окислителем, и восстановителем?</summary>
+    <p>Кислород в H<sub>2</sub>O<sub>2</sub> имеет промежуточную степень
+    окисления −1: ниже неё есть −2 (вода), выше — 0 (молекулярный кислород).
+    Поэтому пероксид способен и принимать электроны, восстанавливаясь до воды
+    (реакция с KI), и отдавать их, окисляясь до O<sub>2</sub> (реакция с
+    дихроматом калия). Что произойдёт, решает партнёр и его потенциал.</p>
+  </details>
+
+  <div class="chapnav">
+    <span><a href="t-solutions">← Глава 5. Растворы</a></span>
+    <span><a href="t-electrochem">Глава 7. Электрохимия →</a></span>
+  </div>
+</main>
+</body>
+</html>
