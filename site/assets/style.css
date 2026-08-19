@@ -159,3 +159,62 @@ details.q p { font-size: 15px; }
 /* навигация «предыдущая/следующая глава» */
 .chapnav { margin-top: 30px; padding-top: 12px; border-top: 1px solid var(--line);
   font: 14.5px system-ui, sans-serif; display: flex; gap: 10px 24px; flex-wrap: wrap; justify-content: space-between; }
+
+/* ================= виртуальная лаборатория ================= */
+
+.lab {
+  background: var(--paper); border: 1px solid var(--line); border-left: 4px solid var(--accent2);
+  border-radius: 12px; box-shadow: var(--shadow); padding: 14px 18px; margin: 20px 0;
+}
+.lab h4 { margin: 0 0 6px; font: 600 15.5px system-ui, sans-serif; }
+.lab p { font-size: 15px; }
+
+.lab-board { display: block; width: 100%; max-width: 640px; margin: 0 auto; }
+.lab-bar {
+  display: flex; gap: 10px 16px; flex-wrap: wrap; align-items: center;
+  font: 14px system-ui, sans-serif; margin: 8px 0 4px;
+}
+.lab-bar input[type=range] { width: 120px; accent-color: var(--accent2); }
+
+.lab-steps { display: flex; gap: 5px; flex-wrap: wrap; margin: 12px 0 8px; }
+.lab-dot {
+  min-width: 28px; height: 28px; border-radius: 50%; border: 1px solid var(--line);
+  background: var(--paper); font: 12px system-ui, sans-serif; cursor: pointer; color: var(--muted);
+}
+.lab-dot.on { background: var(--accent2); border-color: var(--accent2); color: #fff; font-weight: 600; }
+.lab-dot.done { border-color: #1a7f37; color: #1a7f37; }
+.lab-dot[disabled] { opacity: .45; cursor: default; }
+
+.lab-step {
+  background: #f7fafb; border: 1px solid var(--line); border-radius: 10px;
+  padding: 10px 14px; margin-bottom: 8px;
+}
+.lab-controls { display: flex; gap: 8px 14px; flex-wrap: wrap; align-items: center; margin-top: 8px; }
+.lab-ctl { display: flex; align-items: center; gap: 6px; font: 14px system-ui, sans-serif; }
+.lab-ctl input[type=number], .lab-ctl select {
+  font: 14px system-ui, sans-serif; padding: 3px 6px; border: 1px solid var(--line);
+  border-radius: 6px; background: #fff; color: var(--ink); width: 6.5em;
+}
+.lab-msg { font: 14.5px system-ui, sans-serif; min-height: 1.4em; margin: 4px 0; }
+.lab-msg.ok { color: #1a7f37; }
+.lab-msg.bad { color: #9c2b22; }
+
+.lab-obs h4, .lab-journal h4 { margin-top: 16px; }
+.lab-jin {
+  font: 14px system-ui, sans-serif; padding: 3px 7px; border: 1px solid var(--line);
+  border-radius: 6px; background: #fff; color: var(--ink);
+}
+.lab-jbar { display: flex; gap: 10px; flex-wrap: wrap; margin: 6px 0; }
+.lab-jout td.ok, .lab-jout .ok { color: #1a7f37; font-weight: 600; }
+.lab-jout td.bad, .lab-jout .bad { color: #9c2b22; font-weight: 600; }
+.lab-ok { color: #1a7f37; font-weight: 600; }
+.lab-bad { color: #9c2b22; font-weight: 600; }
+
+/* карточка лабораторной работы в списке */
+.labcards { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; margin: 18px 0; }
+.labcard {
+  background: var(--paper); border: 1px solid var(--line); border-radius: 14px;
+  padding: 16px 18px; box-shadow: var(--shadow); display: flex; flex-direction: column; gap: 6px;
+}
+.labcard h3 { margin: 0; font-size: 16.5px; }
+.labcard .meta { font: 13.5px system-ui, sans-serif; color: var(--muted); }
